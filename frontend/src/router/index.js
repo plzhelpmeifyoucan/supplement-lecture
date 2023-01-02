@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import TestView from '@/views/TestView.vue'
 import DataSend2SpringTestView from '@/views/DataSend2SpringTestView.vue'
 import LegacyConnectionTestView from '@/views/LegacyConnectionTestView.vue'
-import SimpleBoardGameView from '@viwes/game'
+
 
 Vue.use(VueRouter)
 

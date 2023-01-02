@@ -1,8 +1,7 @@
 <template>
     <tr>
         <td-component
-            v-for="(cellData, index) in rowData"
-            :key="index"
+            v-for="(cellData, index) in rowData" :key="index"
             :cell-data="cellData"
             :cell-index="index"
             :row-index="rowIndex"
@@ -12,18 +11,17 @@
 </template>
 
 <script>
-
-    export default {
-        name: "TrComponent",
-        components: {
-            TdComponent
-        },
-        props: {
-            rowData: Array,
-            rowIndex: Number,
-            tableData: Array,
-            currentTurnShape: String,
-        }
+import TdComponent from './TdComponent.vue';
+export default {
+    name: "TrComponent",
+    components: {
+        TdComponent
+    },
+    props: {
+        rowData: Array,
+        rowIndex: Number,
+        tableData: Array,
+        currentTurnShape: String,
     }
-
+}
 </script>

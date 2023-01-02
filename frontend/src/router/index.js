@@ -3,8 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TestView from '@/views/TestView.vue'
 import DataSend2SpringTestView from '@/views/DataSend2SpringTestView.vue'
-import LegacyConnectionTestView from '@/views/LegacyConnectionTestView.vue'
-
+import SimpleBoardGameView from '@/views/game/SimpleBoardGameView.vue'
 
 Vue.use(VueRouter)
 
@@ -33,9 +32,9 @@ const routes = [
     component: DataSend2SpringTestView
   },
   {
-    path: '/legacyTest',
-    name: 'legacyTest',
-    component: LegacyConnectionTestView
+    path: '/simple-board-game',
+    name: 'simpleBoardGame',
+    component: SimpleBoardGameView
   },
 ]
 

@@ -9,29 +9,26 @@
 </template>
 
 <script>
-    
-
-    export default {
-        name: "SimpleBoardGameView",
-        components: {
-            TableComponent
-        },
-        data () {
-            return {
-                currentTurnShape: 'O',
-                winner: '',
-                tableData: [
-                    ['', '', '', '', ''],
-                    ['', '', '', '', ''],
-                    ['', '', '', '', ''],
-                    ['', '', '', '', ''],
-                    ['', '', '', '', ''],
-                ]
-            }
-        },
-        methods: {
-
+import TableComponent from '@/components/game/TableComponent.vue';
+export default {
+    name: "SimpleBoardGameView",
+    components: {
+        TableComponent
+    },
+    data () {
+        return {
+            currentTurnShape: 'O',
+            winner: '',
+            tableData: [
+                ['', '', '', '', ''],
+                ['', '', '', '', ''],
+                ['', '', '', '', ''],
+                ['', '', '', '', ''],
+                ['', '', '', '', ''],
+            ]
         }
+    },
+    methods: {
     }
-
+}
 </script>

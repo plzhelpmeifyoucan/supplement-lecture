@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TestView from '@/views/TestView.vue'
 import DataSend2SpringTestView from '@/views/DataSend2SpringTestView.vue'
+import LegacyConnectionTestView from '@/views/LegacyConnectionTestView.vue'
+import SimpleBoardGameView from '@viwes/game'
 
 Vue.use(VueRouter)
 
@@ -29,6 +31,11 @@ const routes = [
     path: '/axiosDataSend2Spring',
     name: 'axiosDataSend2Spring',
     component: DataSend2SpringTestView
+  },
+  {
+    path: '/legacyTest',
+    name: 'legacyTest',
+    component: LegacyConnectionTestView
   },
 ]
 

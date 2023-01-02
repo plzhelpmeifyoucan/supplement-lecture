@@ -27,7 +27,7 @@ export default {
             // npm install axios --save-dev
             // axios는 vue에서 Spring으로 데이터를 전송하기 위한 라이브러리
             // Spring으로 전송하므로 Spring 쪽 PostMapping 작업이 필요함.
-            axios.post('http://localhost:7777/vue/first/receive-test', { memberName, major })
+            axios.post('http://localhost:8080/vue/first/receive-test', { memberName, major })
                 .then(() => {
                     alert('데이터 전송 완료!')
                 })

@@ -12,11 +12,12 @@ import javax.persistence.*;
 @Entity
 @ToString
 @Table(name="test_board")
+@NoArgsConstructor
 public class Board {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int boardNo;
+	private long boardNo;
 	private String title;
 	private String content;
 	private String writer;

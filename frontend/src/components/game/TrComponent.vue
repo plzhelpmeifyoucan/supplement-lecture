@@ -8,12 +8,15 @@
             :table-data="tableData"
             :current-turn-shape="currentTurnShape"
             @updateTurnShape="updateTurnShape"
-            @updateWinner="updateWinner"/>
+            @updateWinner="updateWinner"
+            @updateTableData="updateTableData"/>
     </tr>
 </template>
 
 <script>
+
 import TdComponent from './TdComponent.vue';
+
 export default {
     name: "TrComponent",
     components: {
@@ -35,7 +38,11 @@ export default {
             console.log('TrComponent received TdComponent winner info: ' + passingValue)
             this.winner = passingValue
             this.$emit('updateWinner', this.winner)
+        },
+        updateTableData () {
+            this.$emit('updateTableData')
         }
     }
 }
+
 </script>

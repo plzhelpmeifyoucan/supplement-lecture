@@ -15,7 +15,9 @@ public class TestBoard {
 
     // '글 번호', '제목', '본문', '작성자', '추천개수', '등록일자'
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "exercise1_board_seq_gen")
+    @SequenceGenerator(sequenceName = "exercise1_board_seq", name = "exercise1_board_seq_gen", allocationSize = 1)
+    @Column(name = "id")
     private Long boardNo;
 
     private String title;

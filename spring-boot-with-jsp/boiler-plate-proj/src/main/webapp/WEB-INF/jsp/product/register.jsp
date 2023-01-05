@@ -13,8 +13,8 @@
 
 		var formObj = $("#board");
 
-		$("#btnModify").on("click", function() {
-			formObj.attr("action", "/board/modify");
+		$("#btnRegister").on("click", function() {
+			formObj.attr("action", "/board/register");
 			formObj.attr("method", "post");
 			formObj.submit();
 		});
@@ -27,11 +27,9 @@
 </script>
 
 <body>
-	<h2>MODIFY</h2>
-	
-	<form:form modelAttribute="board" action="modify">
-		<form:hidden path="id" />
-	
+	<h2>REGISTER</h2>
+
+	<form:form modelAttribute="board" action="register">
 		<table>
 			<tr>
 				<td>Title</td>
@@ -40,7 +38,7 @@
 			</tr>
 			<tr>
 				<td>Writer</td>
-				<td><form:input path="writer" readonly="true"/></td>
+				<td><form:input path="writer" /></td>
 				<td><font color="red"><form:errors path="writer" /></font></td>
 			</tr>
 			<tr>
@@ -52,7 +50,7 @@
 	</form:form>
 	
 	<div>
-		<button type="submit" id="btnModify">Modify</button>
+		<button type="submit" id="btnRegister">Register</button>
 		<button type="submit" id="btnList">List</button>
 	</div>
 </body>

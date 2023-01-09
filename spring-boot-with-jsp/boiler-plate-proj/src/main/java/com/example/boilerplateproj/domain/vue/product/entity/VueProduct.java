@@ -8,13 +8,13 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+
 @Data
 @Entity
 @ToString
-@Table(name = "vue_product")
+@Table(name="vue_product")
 @NoArgsConstructor
 public class VueProduct {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "vue_product_seq_gen")
@@ -22,10 +22,8 @@ public class VueProduct {
     @Column(name = "id")
     private Long id;
 
-    private  String name;
-
+    private String name;
     private String description;
-
     private Long price;
 
     @CreationTimestamp
@@ -33,4 +31,10 @@ public class VueProduct {
 
     @UpdateTimestamp
     private LocalDateTime updatedTime;
+
+    public VueProduct(String name, String description, Long price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
 }

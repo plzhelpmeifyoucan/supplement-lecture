@@ -22,7 +22,7 @@ public class ProductTest {
 
     @Test
     public void writeTest () throws Exception {
-        Product product = new ProductRequest("상품명", "상품 세부 정보", 10000L);
+        ProductRequest productRequest = new ProductRequest("상품명", "상품 세부 정보", 10000L);
         service.registerProduct(product);
     }
 

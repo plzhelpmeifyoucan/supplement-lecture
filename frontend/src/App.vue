@@ -1,5 +1,6 @@
 <template>
   <v-app>
+<<<<<<< HEAD
     <v-app-bar
       app
       color="primary"
@@ -37,6 +38,8 @@
       </v-btn>
     </v-app-bar>
 
+=======
+>>>>>>> 537ee5ab125af137bfd4ffe96f22a80eb95889de
     <v-main>
       <router-view/>
     </v-main>
@@ -44,6 +47,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 
 export default {
   name: 'App',
@@ -52,4 +56,14 @@ export default {
     //
   }),
 };
+=======
+
+export default {
+  name: 'App',
+  data: () => ({
+
+  }),
+}
+
+>>>>>>> 537ee5ab125af137bfd4ffe96f22a80eb95889de
 </script>

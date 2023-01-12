@@ -1,15 +1,33 @@
 <template>
-  <hello-world />
+  <v-container>
+    <div id="app">
+      <nav>
+        <router-link to="/">HomeView</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/test">Test</router-link> |
+        <router-link to="/axiosDataSend2Spring">Vue에서 Spring으로 데이터 전송</router-link> |
+        <router-link to="/simple-board-game">보드 게임</router-link> |
+        <router-link to="/exercise1">연습 문제 1</router-link> |
+        <router-link to="/file-upload-test">파일 업로드 테스트</router-link><br/>
+        <router-link to="/board-list">Vue 게시판</router-link> |
+        <router-link to="/product-list">상품 게시판</router-link> |
+        <router-link to="/carousel-view">크로셀</router-link> |
+      </nav>
+      <router-view/>
+    </div>
+  </v-container>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
 
+<<<<<<< HEAD
   export default {
     name: 'Home',
+=======
+export default {
+  name: 'HomeView',
+  components: {}
+}
+>>>>>>> 537ee5ab125af137bfd4ffe96f22a80eb95889de
 
-    components: {
-      HelloWorld,
-    },
-  }
 </script>

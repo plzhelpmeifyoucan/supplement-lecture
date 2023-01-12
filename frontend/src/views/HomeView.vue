@@ -20,14 +20,9 @@
 
 <script>
 
-<<<<<<< HEAD
-  export default {
-    name: 'Home',
-=======
 export default {
   name: 'HomeView',
   components: {}
 }
->>>>>>> 537ee5ab125af137bfd4ffe96f22a80eb95889de
 
 </script>

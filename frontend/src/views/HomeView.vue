@@ -14,6 +14,9 @@
         <router-link to="/carousel-view">크로셀</router-link> |
         <router-link to="/img-gallery-view">이미지 갤러리</router-link> |
         <router-link to="/dialog-view">다이얼로그</router-link> |
+        <router-link to="/navigation-view">네비뷰</router-link> |
+        <router-link to="/table-view">테이블뷰</router-link> |
+        <router-link to="/exercise2">연습 문제 2</router-link> |
       </nav>
       <router-view/>
     </div>

@@ -2,18 +2,20 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TestView from '@/views/TestView.vue'
+import BoardListPage from '@/views/typescript/board/BoardListPage.vue'
+import BoardRegisterPage from '@/views/typescript/board/BoardRegisterPage.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'HomeView',
     component: HomeView
   },
   {
     path: '/about',
-    name: 'about',
+    name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -21,8 +23,18 @@ const routes = [
   },
   {
     path: '/test',
-    name: 'test',
+    name: 'TestView',
     component: TestView
+  },
+  {
+    path: '/board-list',
+    name: 'BoardListPage',
+    component: BoardListPage
+  },
+  {
+    path: '/board-register',
+    name: 'BoardRegisterPage',
+    component: BoardRegisterPage
   },
 ]
 

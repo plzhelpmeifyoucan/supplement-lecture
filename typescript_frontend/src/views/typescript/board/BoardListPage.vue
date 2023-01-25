@@ -4,7 +4,7 @@
         <router-link :to="{ name: 'BoardRegisterPage' }">
             게시물 작성
         </router-link>
-        <board-list :boards="boards"/>
+        <board-list :boards="moduleStore.boards"/>
     </v-container>
 </template>
 
@@ -13,7 +13,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import { State, Action } from 'vuex-class'
 import BoardList from "@/components/typescript/board/BoardList.vue";
-import { Board } from '@/store/board/boardIndex'
+import { Board } from '@/store/board/BoardModule'
 
 @Component({
     components: {
@@ -23,10 +23,14 @@ import { Board } from '@/store/board/boardIndex'
 
 export default class BoardListPage extends Vue {
     @State readonly boards!: Board[]
-    @Action readonly requestBoardListToSpring: any
+    @Action readonly requestBoardListToSpring!: any;
+
+    get moduleStore () {
+        return this.$store.state.BoardModule
+    }
 
     created () {
-        this.requestBoardListToSpring()
+        this.$store.dispatch('BoardModule/requestBoardListToSpring')
     }
 }
 </script>

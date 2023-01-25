@@ -50,7 +50,7 @@
 <script lang="ts">
 
 import { Component, Prop, Emit, Vue } from 'vue-property-decorator'
-import { Board } from '@/store/board/boardIndex'
+import { Board } from '@/store/board/BoardModule'
 
 @Component
 export default class BoardModifyForm extends Vue {
@@ -59,16 +59,22 @@ export default class BoardModifyForm extends Vue {
     
     title: string = ''
     content: string = ''
+    boardNo!: number
+    writer!: string
+    regDate!: string
 
     created () {
         this.title = this.board.title
         this.content = this.board.content
+        this.boardNo = this.board.boardNo
+        this.writer = this.board.writer
+        this.regDate = this.board.regDate
     }
 
     @Emit('submit')
     onSubmit () {
-        const { title, content } = this
-        return { title, content }
+        const { boardNo, title, content, writer, regDate } = this
+        return { boardNo, title, content, writer, regDate }
     }
 }
 </script>
